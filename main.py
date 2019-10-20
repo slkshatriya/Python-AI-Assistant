@@ -41,17 +41,17 @@ def search(text=''):
       # extracting result from pod1
       result = resolveListOrDict(pod1['subpod'])
       print(result)
-      question = resolveListOrDict(pod0['subpod'])
-      question = removeBrackets(question)
-      primaryImage(question)
+      query = resolveListOrDict(pod0['subpod'])
+      query = removeBrackets(query)                                    #changing in variable question to query
+      primaryImage(query)
     else:
       # extracting wolfram question interpretation from pod0
-      question = resolveListOrDict(pod0['subpod'])
+      query = resolveListOrDict(pod0['subpod'])
       # removing unnecessary parenthesis
-      question = removeBrackets(question)
+      querys = removeBrackets(query)
       # searching for response from wikipedia
-      search_wiki(question)
-      primaryImage(question)
+      search_wiki(query)
+      primaryImage(query)
 
 
 def removeBrackets(variable):
